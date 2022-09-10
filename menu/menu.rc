@@ -1,0 +1,32 @@
+#include "Menu.h"
+
+FRMenu MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "&Open...", IDM_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit", IDM_EXIT
+    }
+
+    POPUP "&View"
+    {
+        POPUP "&Mode"
+        {
+            MENUITEM "&Layout", IDM_LAYOUT
+            MENUITEM "&Default",IDM_DEFAULT, CHECKED, GRAYED
+        }
+
+        POPUP "Fon&t"
+        {
+            MENUITEM "&Consolas", IDM_CONSOLAS, CHECKED, GRAYED
+            MENUITEM "Courier &New",IDM_COURIER
+            MENUITEM "L&ucida Console", IDM_LUCIDA
+        }
+    }
+
+    POPUP "&Help"
+    {
+        MENUITEM "&About", IDM_ABOUT
+    }
+}
